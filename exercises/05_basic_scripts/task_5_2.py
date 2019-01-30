@@ -47,3 +47,6 @@ london_co = {
         'routing': True
     }
 }
+
+dev=input('Enter device name:')
+
