@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 '''
 Задание 5.2a
@@ -44,3 +45,7 @@ london_co = {
         'routing': True
     }
 }
+
+dev=input('Enter device name:')
+par=input('Enter parameter name:')
+print(london_co[dev][par])

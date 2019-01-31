@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 '''
 Задание 5.2c
@@ -48,3 +49,8 @@ london_co = {
         'routing': True
     }
 }
+
+dev=input('Enter device name:')
+inv_par=('Enter parameter name (')+(', '.join(list(london_co[dev].keys())))+'):'
+par=input(inv_par)
+print(london_co[dev].get(par,'There is no such parameter'))

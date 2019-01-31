@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 '''
 Задание 5.2
@@ -49,4 +50,4 @@ london_co = {
 }
 
 dev=input('Enter device name:')
-
+print(london_co[dev])
