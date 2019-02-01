@@ -17,8 +17,14 @@ num_list = [10, 2, 30, 100, 10, 50, 11, 30, 15, 7]
 word_list = [
     'python', 'ruby', 'perl', 'ruby', 'perl', 'python', 'ruby', 'perl'
 ]
-num_rev=num_list.reverse()
-print(num_list.reverse())
+print(num_list)
+num_list.reverse()
 num=int(input('Enter number:'))
-last_num=num_list.reverse().index(num)
+last_num=len(num_list)-num_list.index(num)-1
+print(last_num)
+
+print('\n',word_list)
+word_list.reverse()
+num=input('Enter number:')
+last_num=len(word_list)-word_list.index(num)-1
 print(last_num)
