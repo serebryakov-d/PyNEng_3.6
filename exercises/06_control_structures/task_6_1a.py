@@ -18,22 +18,27 @@
 
 '''
 
-#ip_addr=input('Enter dotted decimap IP address:')
-ip_addr='365.11.11.11'
-ip_l=ip_addr.split('.')
-dotted=False
-if 
+ip_addr=input('Enter dotted decimap IP address:')
+#ip_addr='65.11.11.11.45'
 
-ip1=int(ip_addr.split('.')[0])
-if ip1 >= 1 and ip1 <= 223:
-    result='unicast'
-elif ip1 >= 224 and ip1 <= 239:
-    result='multicast'
-elif ip_addr=='255.255.255.255':
-    result='local broadcast'
-elif ip_addr=='0.0.0.0':
-    result='unassigned'
+ip_l=ip_addr.split('.')
+digit_num=True
+for N in ip_l:
+    digit_num*=N.isdigit()
+
+if (len(ip_l)==4) and digit_num:
+    ip1=int(ip_addr.split('.')[0])
+    if ip1 >= 1 and ip1 <= 223:
+        result='unicast'
+    elif ip1 >= 224 and ip1 <= 239:
+        result='multicast'
+    elif ip_addr=='255.255.255.255':
+        result='local broadcast'
+    elif ip_addr=='0.0.0.0':
+        result='unassigned'
+    else:
+        result='unused'
 else:
-    result='unused'
+    result='Incorrect IPv4 address'
 
 print(result)
