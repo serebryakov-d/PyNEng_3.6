@@ -18,15 +18,21 @@
 
 '''
 
-ip_addr=input('Enter dotted decimap IP address:')
-#ip_addr='65.11.11.11.45'
+#ip_addr=input('Enter dotted decimal IP address:')
+ip_addr='65.11.11.11'
 
+#are there numbers?
 ip_l=ip_addr.split('.')
 digit_num=True
 for N in ip_l:
     digit_num*=N.isdigit()
 
-if (len(ip_l)==4) and digit_num:
+#correct range?
+digit_val=True
+for N in ip_l:
+    digit_val*=(int(N) in range(0,256))
+
+if (len(ip_l)==4) and digit_num and digit_val:
     ip1=int(ip_addr.split('.')[0])
     if ip1 >= 1 and ip1 <= 223:
         result='unicast'
